@@ -1,4 +1,4 @@
-package com.example.downloadscreenplugin;
+package com.zee5.downloadpluginscreen;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,11 +7,12 @@ import android.support.v4.app.Fragment;
 
 import com.applicaster.plugin_manager.screen.PluginScreen;
 import com.zee5.zee5dw.zee5downloader.DownloadActivity;
+import com.zee5.zee5dw.zee5downloader.fragment.DownloadFragment;
 
 import java.io.Serializable;
 import java.util.HashMap;
 
-public class downloadsScreenPlugin implements PluginScreen {
+public class DownloadsScreenPlugin implements PluginScreen {
     @Override
     public void present(Context context, HashMap<String, Object> screenMap, Serializable dataSource, boolean isActivity) {
         if(context != null)
@@ -20,6 +21,6 @@ public class downloadsScreenPlugin implements PluginScreen {
 
     @Override
     public Fragment generateFragment(HashMap<String, Object> screenMap, Serializable dataSource) {
-        return null;
+        return (Fragment)DownloadFragment.newInstance();
     }
 }
