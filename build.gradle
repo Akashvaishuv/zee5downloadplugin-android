@@ -29,19 +29,48 @@ android {
 }
 
 repositories {
+    google()
+    jcenter()
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
     maven {
-        credentials {
-            username System.getenv("MAVEN_USERNAME")
-            password System.getenv("MAVEN_PASSWORD")
+        credentials{
+            username System.getenv("BINTRAY_USER")
+            if(null == username || username.isEmpty()){
+                throw new Exception("Missing environment variable: BINTRAY_USER")
+            }
+
+            password System.getenv("BINTRAY_API_KEY")
+            if(null == password || password.isEmpty()){
+                throw new Exception("Missing environment variable: BINTRAY_API_KEY")
+            }
         }
         url 'https://dl.bintray.com/applicaster-ltd/maven'
     }
-    jcenter()
-    mavenCentral()
     maven {
-        url 'https://maven.google.com'
+        url "https://zee5.bintray.com/maven"
+        credentials {
+            username 'nileshverma@zee5'
+            password '38833a699ebcd77ea954af5df665259755b385d0'
+        }
     }
-    maven { url 'https://jitpack.io' }
+    maven {
+        url "https://zee5.bintray.com/maven"
+        credentials {
+            username 'amalshahzee'
+            password '2eb1dcb57080b96b70f0e3d8390ff73811ffdf2d'
+        }
+    }
+    maven {
+        url "https://dl.bintray.com/applicaster-ltd/maven_plugins"
+    }
+    maven {
+        url "https://zee5.bintray.com/maven"
+        credentials {
+            username 'arjunsharma'
+            password 'd492ffee82e6ef16f7882549d82b304b05bce616'
+        }
+    }
 }
 
 dependencies {
