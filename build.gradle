@@ -47,7 +47,7 @@ repositories {
 dependencies {
     implementation 'com.android.support:support-compat:28.0.0'
     implementation 'com.applicaster:applicaster-android-sdk:4.0.0'
-    implementation 'com.applicaster:Zee5RootPlayer:0.4.5'
+    implementation 'com.applicaster:Zee5RootPlayer:0.8.+'
 }
 
 //---------------------------------- Bintray ----------------------------------//
