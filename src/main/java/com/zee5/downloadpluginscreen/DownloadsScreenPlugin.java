@@ -1,4 +1,4 @@
-package com.zee5.downloadscreenplugin;
+package com.zee5.downloadpluginscreen;
 
 import android.content.Context;
 import android.content.Intent;
