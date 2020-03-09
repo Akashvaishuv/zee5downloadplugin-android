@@ -84,11 +84,7 @@ dependencies {
         implementation(applicasterSDKPath)
     }
 
-    implementation ("com.applicaster:Zee5RootPlayer:0.9.+") {
-		exclude group:    'com.applicaster', module: 'applicaster-android-sdk'
-		exclude group:    'com.applicaster', module: 'zapp-root-android'
-        exclude group:    'com.applicaster', module: 'Zee5HomeScreen-Android'
-	}
+    implementation ("com.applicaster:Zee5RootPlayer:0.9.+")
 
 }
 
