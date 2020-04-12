@@ -75,7 +75,7 @@ repositories {
 
 dependencies {
     implementation 'com.android.support:support-compat:28.0.0'
-    def applicasterSDKPath = 'com.applicaster:applicaster-android-sdk:4.2.+'
+    def applicasterSDKPath = 'com.applicaster:applicaster-android-sdk:4.9.+'
     // Check if an open SDK is defined - if not use the closed one.
     def devSDK = findProject(':applicaster-android-sdk')
     if (devSDK != null) {
@@ -96,7 +96,7 @@ dependencies {
 
     }
 
-    implementation ("com.applicaster:Zee5RootPlayer:0.13.+") {
+    implementation ("com.applicaster:Zee5RootPlayer:1.0.+") {
 		exclude group:    'com.applicaster', module: 'applicaster-android-sdk'
 		exclude group:    'com.applicaster', module: 'zapp-root-android'
         exclude module: 'Zee5HomeScreen-Android'
